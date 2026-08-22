@@ -55,7 +55,7 @@ It is printed in a biocompatible resin. Standard 3D printing resins leach compou
   <img src="Docs/images/snowflake_printed.jpg" alt="Snowflake printed" width="45%">
 </p>
 
-📁 **[Snowflake CAD files](https://example.com/onedrive/snowflake-cad)**
+📁 **[Snowflake and chip CAD](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Lung%20Chips%20v3?d=w35908b0c16424d05acf1a3019ef7b8cf&csf=1&web=1&e=b5t1vh)**
 
 ### Chip construction
 
@@ -69,7 +69,7 @@ Each side wall is thinned at its midpoint. That notch makes the wall buckle pred
 
 Cells are seeded in a soft hydrogel and cured under UV at least 24 hours before flight.
 
-📁 **[Chip CAD and laser-cut files](https://example.com/onedrive/chip-cad)**
+📁 **[Chip CAD and laser-cut files](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Lung%20Chips%20v3?d=w35908b0c16424d05acf1a3019ef7b8cf&csf=1&web=1&e=b5t1vh)**
 
 ### Fluidics
 
@@ -78,11 +78,10 @@ Media is driven by a **peristaltic pump**: a single motor turning a six-channel 
 Tubing bore sets the flow constant, so swapping tubing types means recalibrating.
 
 <p align="center">
-  <img src="Docs/images/peristaltic_cad.png" alt="Peristaltic pump CAD" width="45%">
-  <img src="Docs/images/peristaltic_built.jpg" alt="Assembled peristaltic pump" width="45%">
+  <img src="Docs/images/peristaltic_cad.png" alt="Peristaltic pump CAD" width="60%">
 </p>
 
-📁 **[Peristaltic pump CAD](https://example.com/onedrive/peristaltic-cad)**
+📁 **[Fluidic system CAD](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Fluidic%20System?d=w16c38d629a5f4bcf87ed13ff716866e8&csf=1&web=1&e=nU2n4l)**
 
 ### Vacuum and breathing
 
@@ -103,7 +102,7 @@ Each stroke uses a smooth ramp-up and ramp-down rather than constant speed, so t
 </p>
 <p align="center"><sub>Left: syringe pump. Right: measured manifold pressure, fast inhale and slower exhale over a 4.5 s cycle.</sub></p>
 
-📁 **[Syringe pump CAD](https://example.com/onedrive/syringe-pump-cad)**
+📁 **[Pneumatic system CAD](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Pneumatic%20System?d=wcfc5efa09a4f4ced8ca7f6215303fdc1&csf=1&web=1&e=ee3D4R)**
 
 ---
 
@@ -116,6 +115,8 @@ Each stroke uses a smooth ramp-up and ramp-down rather than constant speed, so t
   <img src="Docs/images/thermal_built.jpg" alt="Assembled thermal stack" width="45%">
 </p>
 <p align="center"><sub>Heat plate, thermoelectric module and heat sink stack that sits under the Snowflake.</sub></p>
+
+📁 **[Thermal system CAD](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Thermal%20System?d=wd50bbb7588ce4d16a10b382d4e7c52ae&csf=1&web=1&e=I3smte)**
 
 **Humidity.** An ultrasonic mister adds water vapor without adding heat, which keeps humidity and temperature control independent. It runs on a simple on/off band around 50 % RH.
 
@@ -139,7 +140,7 @@ Three boards, one job each.
 
 **Flight hardening.** Propeller vibration and motor electrical noise both attack this kind of payload. Countermeasures: locking connectors throughout, the display mounted on a flex cable so vibration can't crack solder joints, transient suppression on the battery input, a single common ground point, and twisted-pair wiring on the serial link.
 
-📁 **[Altium projects and board files](https://example.com/onedrive/electronics)**
+📁 **[Electronics and board files](https://tecmx-my.sharepoint.com/:f:/g/personal/a01643424_tec_mx/IgBdwAhqTUQjSbpcXcoJF4V1AQ2VH6qcj909r_itQnSbRJw?e=KwFy0G)**
 
 ---
 
@@ -241,10 +242,13 @@ gantt
 
 Large binaries (full CAD assemblies, raw test data) are hosted externally:
 
-- 📁 [CAD files](https://example.com/onedrive/cad)
-- 📁 [Electronics / Altium](https://example.com/onedrive/electronics)
-- 📁 [Test data](https://example.com/onedrive/test-data)
-- 📄 [Full documentation PDF](https://example.com/onedrive/docs)
+- 📁 **[All project files](https://tecmx-my.sharepoint.com/:f:/g/personal/a01643424_tec_mx/IgBdwAhqTUQjSbpcXcoJF4V1AQ2VH6qcj909r_itQnSbRJw?e=KwFy0G)** — chassis, electronics, test data, full documentation
+- 📁 [Snowflake and chips](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Lung%20Chips%20v3?d=w35908b0c16424d05acf1a3019ef7b8cf&csf=1&web=1&e=b5t1vh)
+- 📁 [Fluidic system](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Fluidic%20System?d=w16c38d629a5f4bcf87ed13ff716866e8&csf=1&web=1&e=nU2n4l)
+- 📁 [Pneumatic system](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Pneumatic%20System?d=wcfc5efa09a4f4ced8ca7f6215303fdc1&csf=1&web=1&e=ee3D4R)
+- 📁 [Thermal system](https://tecmx-my.sharepoint.com/:f:/r/personal/a01643424_tec_mx/Documents/Harvard%20Medical%20School/Lung%20on%20a%20Drone/Drone%20v3/Thermal%20System?d=wd50bbb7588ce4d16a10b382d4e7c52ae&csf=1&web=1&e=I3smte)
+
+Access is restricted. Request it from the payload team if you need it.
 
 ---
 
