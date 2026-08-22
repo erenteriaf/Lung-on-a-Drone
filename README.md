@@ -77,6 +77,11 @@ Media is driven by a **peristaltic pump**: a single motor turning a six-channel 
 
 Tubing bore sets the flow constant, so swapping tubing types means recalibrating.
 
+<p align="center">
+  <img src="Docs/images/peristaltic_cad.png" alt="Peristaltic pump CAD" width="45%">
+  <img src="Docs/images/peristaltic_built.jpg" alt="Assembled peristaltic pump" width="45%">
+</p>
+
 📁 **[Peristaltic pump CAD](https://example.com/onedrive/peristaltic-cad)**
 
 ### Vacuum and breathing
@@ -92,6 +97,12 @@ A single syringe on a lead screw pulls vacuum on a manifold that connects to eve
 
 Each stroke uses a smooth ramp-up and ramp-down rather than constant speed, so there is no pressure jolt at the direction reversal. The syringe finds a limit switch on every power-up to establish a known zero.
 
+<p align="center">
+  <img src="Docs/images/syringe_pump.jpg" alt="Syringe pump on its lead-screw carriage" width="45%">
+  <img src="Docs/images/pressure_trace.png" alt="Measured manifold pressure over several breathing cycles" width="45%">
+</p>
+<p align="center"><sub>Left: syringe pump. Right: measured manifold pressure, fast inhale and slower exhale over a 4.5 s cycle.</sub></p>
+
 📁 **[Syringe pump CAD](https://example.com/onedrive/syringe-pump-cad)**
 
 ---
@@ -99,6 +110,12 @@ Each stroke uses a smooth ramp-up and ramp-down rather than constant speed, so t
 ## Atmosphere
 
 **Temperature.** A thermoelectric module both heats and cools depending on current direction. This matters in the field: on a warm day the payload needs to shed heat, which a resistive heater cannot do. Two temperature sensors feed the loop, one reading air and one reading the plate under the chips. The plate sensor drives the control.
+
+<p align="center">
+  <img src="Docs/images/thermal_cad.png" alt="Thermal stack CAD" width="45%">
+  <img src="Docs/images/thermal_built.jpg" alt="Assembled thermal stack" width="45%">
+</p>
+<p align="center"><sub>Heat plate, thermoelectric module and heat sink stack that sits under the Snowflake.</sub></p>
 
 **Humidity.** An ultrasonic mister adds water vapor without adding heat, which keeps humidity and temperature control independent. It runs on a simple on/off band around 50 % RH.
 
@@ -115,11 +132,6 @@ Three boards, one job each.
 | Power board | Battery input protection, voltage regulation, distribution |
 | Control board | All real-time control and every actuator driver |
 | Display board | Front panel readout of system state |
-
-<p align="center">
-  <img src="Docs/images/power_board.png" alt="Power board" width="45%">
-  <img src="Docs/images/control_board.png" alt="Control board" width="45%">
-</p>
 
 **Why the split.** Two microcontrollers divide work by how time-critical it is. The control board owns everything that cannot be late: temperature loop, motor step timing, sensor reads. The display board only draws the screen. A slow screen refresh can therefore never delay a control update or drop a motor step. The two talk over a simple serial link ten times a second.
 
