@@ -169,44 +169,51 @@ Flow rate can be changed in flight over the motor driver's serial interface with
 
 ```mermaid
 gantt
-    title Lung-on-a-Drone development
+    title Lung-on-a-Drone development plan
     dateFormat YYYY-MM-DD
-    axisFormat %b %d
+    axisFormat %d %b
 
-    section Hardware
-    Rev 2.0 boards built            :done,   h1, 2026-04-01, 2026-06-23
-    Display connector on PCB-3      :active, h2, 2026-08-01, 14d
-    Update schematics in Altium     :        h3, after h2, 10d
+    section Documentation
+    Documentation review                  :active, doc,  2026-08-22, 2026-09-01
 
-    section Validation
-    Pressure vs stroke calibration  :active, v1, 2026-08-10, 21d
-    Full-duration bench run         :        v2, after v1, 7d
-    First live-chip flight          :crit,   v3, after v2, 14d
+    section Fluidics and vacuum
+    Peristaltic pump review and build     :        peri, 2026-08-29, 14d
+    Vacuum system review and build        :        vac,  2026-08-29, 14d
 
-    section Regulatory
-    FAA Part 107 waiver             :active, r1, 2026-07-15, 60d
+    section Biological module
+    Snowflake and chip review and build   :        snow, 2026-08-29, 21d
 
-    section Rev 3.0
-    Ground telemetry link           :        f1, 2026-10-01, 30d
-    Onboard data logging            :        f2, 2026-10-01, 21d
-    Barrier-integrity sensing       :        f3, after f1, 45d
+    section Checkpoint
+    Systems test                          :crit,   test, after peri vac snow, 2d
+
+    section Thermal
+    Thermal system review                 :        th1,  after test, 7d
+    Thermal control design and build      :        th2,  after th1, 14d
+
+    section Electronics
+    Power division board design           :        pwr,  after test, 28d
+    Control and sensor system design      :        ctrl, after test, 28d
+
+    section Integration
+    System integration and debug          :        integ, after th2 pwr ctrl, 14d
+    In-lab testing                        :        lab,  after integ, 7d
+    Field test validation (waiver)        :crit,   field, after lab, 7d
 ```
 
 **Open items**
 
-- [x] Rev 2.0 boards fabricated and populated
-- [x] Drop resistive heaters, thermoelectric only
-- [ ] Update schematics to the current humidity sensor
-- [ ] Add a proper display connector to the display board
-- [ ] Calibrate manifold pressure against syringe stroke
-- [ ] Validate the breathing profile on live chips
-- [ ] Ground telemetry link
-- [ ] Onboard data logging
-- [ ] Barrier-integrity sensing
-- [ ] CO₂ control
-- [ ] Over-the-air firmware updates
-- [ ] Automatic return-to-home on sustained fault
-- [ ] FAA Part 107 waiver
+- [ ] Documentation review
+- [ ] Peristaltic pump: review and manufacture
+- [ ] Vacuum system: review and manufacture
+- [ ] Snowflake and chips: architecture review and manufacture
+- [ ] Systems test checkpoint
+- [ ] Thermal system review
+- [ ] Thermal control design and manufacture
+- [ ] Power division board design
+- [ ] Control and sensor system design
+- [ ] System integration and debug
+- [ ] In-lab testing
+- [ ] Field test validation (pending FAA Part 107 waiver)
 
 ---
 
